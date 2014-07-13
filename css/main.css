@@ -45,6 +45,7 @@ body{
 
 a{
   text-decoration: none;
+  color: inherit;
 }
 
 .wrap{
@@ -64,7 +65,12 @@ a{
 }
 
 #header .avatar img{
+  display: block;
   -webkit-filter: grayscale(0.6);
+  -moz-filter: grayscale(0.6);
+  -ms-filter: grayscale(0.6);
+  -o-filter: grayscale(0.6);
+  filter: grayscale(0.6);
 }
 
 #header h1{
@@ -83,6 +89,97 @@ a{
 }
 
 /* Footer */
+#footer nav{
+  margin: 20px 0 0;
+}
+
 #footer nav li{
   list-style: none;
+}
+
+@-webkit-keyframes pop{
+  0% { -webkit-transform: scale(1); }
+  5% { -webkit-transform: scale(0.8); }
+  10% { -webkit-transform: scale(1); }
+}
+@-moz-keyframes pop{
+  0% { -moz-transform: scale(1); }
+  5% { -moz-transform: scale(0.8); }
+  10% { -moz-transform: scale(1); }
+}
+@-ms-keyframes pop{
+  0% { -ms-transform: scale(1); }
+  5% { -ms-transform: scale(0.8); }
+  10% { -ms-transform: scale(1); }
+}
+@-o-keyframes pop{
+  0% { -o-transform: scale(1); }
+  5% { -o-transform: scale(0.8); }
+  10% { -o-transform: scale(1); }
+}
+@keyframes pop{
+  0% { transform: scale(1); }
+  5% { transform: scale(0.8); }
+  10% { transform: scale(1); }
+}
+
+#footer nav li a{
+  display: block;
+  font-size: 3rem;
+  line-height: 90%;
+  text-align: center;
+  -webkit-transition: color 500ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  -moz-transition: color 500ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  -ms-transition: color 500ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  -o-transition: color 500ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: color 500ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  -webkit-animation: pop 5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+  -moz-animation: pop 5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+  -ms-animation: pop 5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+  -o-animation: pop 5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+  animation: pop 5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+#footer nav li a.github{
+  -webkit-animation-delay: 3000ms;
+  -moz-animation-delay: 3000ms;
+  -ms-animation-delay: 3000ms;
+  -o-animation-delay: 3000ms;
+  animation-delay: 3000ms;
+}
+
+#footer nav li a.linkedin{
+  -webkit-animation-delay: 3050ms;
+  -moz-animation-delay: 3050ms;
+  -ms-animation-delay: 3050ms;
+  -o-animation-delay: 3050ms;
+  animation-delay: 3050ms;
+}
+
+#footer nav li a.facebook{
+  -webkit-animation-delay: 3100ms;
+  -moz-animation-delay: 3100ms;
+  -ms-animation-delay: 3100ms;
+  -o-animation-delay: 3100ms;
+  animation-delay: 3100ms;
+}
+
+#footer nav li a.twitter{
+  -webkit-animation-delay: 3150ms;
+  -moz-animation-delay: 3150ms;
+  -ms-animation-delay: 3150ms;
+  -o-animation-delay: 3150ms;
+  animation-delay: 3150ms;
+}
+
+#footer nav li a.mail{
+  -webkit-animation-delay: 3200ms;
+  -moz-animation-delay: 3200ms;
+  -ms-animation-delay: 3200ms;
+  -o-animation-delay: 3200ms;
+  animation-delay: 3200ms;
+}
+
+#footer nav li a:hover{
+  color: #686868;
 }
