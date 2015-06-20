@@ -110,6 +110,10 @@ h2 {
 
 }
 
+.sobre li {
+	padding: 6px 0;
+}
+
 nav.main-nav {
 	padding: 20px 20px 0;
 
@@ -185,7 +189,7 @@ a,
 }
 
 ul 	{ margin:0; padding:0; }
-li	{ list-style-type:circle; list-style-position:inside; }
+li	{ list-style-type:circle; list-style-position:inside;}
 
 /* Line Height */
 #post-body, p { line-height:1.7; }
@@ -293,7 +297,17 @@ hr {
 	background: #eee;
 }
 
-span.code { font-family:'Fira Mono', monospace; background-color:#EEE; font-size:14px; }
+span.code {
+	font-family:'Fira Mono', monospace;
+	background-color:#EEE;
+	font-size:14px;
+}
+
+code {
+	background: #ededed;
+	border-radius: 3px;
+	padding: 2px 3px;
+}
 
 pre	{
 	font-family:'Fira Mono', monospace;
