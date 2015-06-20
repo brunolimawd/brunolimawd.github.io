@@ -1,9 +1,0 @@
-{
-    "name": "Carro do lixo",
-    "package_path" : "http://brunolima.io/teste-pack/app.zip",
-    "version": "0.1.0",
-    "developer": {
-        "name": "bruno lima",
-        "url": "http://brunolima.io"
-    }
-}

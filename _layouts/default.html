@@ -1,45 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title>{{ page.title }}</title>
-	<meta name="viewport" content="width=device-width">
-	<link rel="shortcut icon" href="/favicon.ico">
-	<link rel="icon" href="/favicon.ico">
-	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700">
-	<link rel="stylesheet" href="/css/main.css">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ site.name }}{% if page.title %} - {{ page.title }}{% endif %}</title>
+  <link rel="shortcut icon" href="/assets/images/favicon.ico">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Fira+Mono:400,700">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="alternate" type="application/rss+xml" title="My Blog" href="/rss.xml">
+  <link rel="stylesheet" href="/assets/css/highlight.css">
 </head>
 <body>
-	<div class="wrap">
-		<header id="header">
-			<div class="avatar">
-				<img src="http://www.gravatar.com/avatar/810bb6afeaae48e2b2a9f06c932410bc?s=128" alt="{{ site.name }}">
-			</div>
-			<h1>{{ site.name }}</h1>
-			<p>Front-end Developer</p>
-		</header><!-- /header -->
-		{{ content }}
-		<footer id="footer">
-			<nav class="social">
-				<ul>
-					<li><a href="http://github.com/brunolimawd" target="_blank" title="GitHub" class="github"><span class="symbol">githubalt</span></a></li>
-					<li><a href="http://linkedin.com/in/brunolimawd" target="_blank" title="LinkedIn" class="linkedin"><span class="symbol">linkedin</span></a></li>
-					<li><a href="http://facebook.com/brunolimawd" target="_blank" title="Facebook" class="facebook"><span class="symbol">facebook</span></a></li>
-					<li><a href="http://twitter.com/brunolimawd" target="_blank" title="Twitter" class="twitter"><span class="symbol">twitterbird</span></a></li>
-					<li><a href="mailto:brunolimawd@gmail.com" title="e-mail" class="mail"><span class="symbol">email</span></a></li>
-				</ul>
-			</nav>
-		</footer><!-- /footer --> 
-	</div>
-	<!-- Google Tag Manager -->
-	<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-WTXZT8" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  {% include navigation.html %}
+
+  {% if page.profile %}
+      {% include profile.html %}
+  {% endif %}
+
+  <section id="wrapper" class="{% if page.profile %}home{% endif %}">
+    {{ content }}
+  </section>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/highlight.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- Google Tag Manager -->
+	<noscript><iframe src="//www.googletagmanager.com/ns.html?id={{ site.google_tag_manager }}" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<script>
 		(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-		})(window,document,'script','dataLayer','GTM-WTXZT8');
+		})(window,document,'script','dataLayer','{{ site.google_tag_manager }}');
 	</script>
 	<!-- End Google Tag Manager -->
 </body>

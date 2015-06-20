@@ -1,3 +1,35 @@
-name: Bruno Lima
+name: brunolima.io
+description: Front-End Developer e Headbanger
+meta_description: "Your New Jekyll Site, Blogging about stuffs"
+
+aboutPage: true
+
 markdown: redcarpet
-pygments: true
+highlighter: pygments
+
+paginate: 2
+baseurl: /
+domain_name: 'http://brunolima.io'
+google_tag_manager: 'GTM-WTXZT8'
+disqus_shortname: 'brunolimaio'
+
+# Details for the RSS feed generator
+url:            'http://brunolima.io'
+author:         'Bruno Lima'
+authorTwitter:  'brunolimawd'
+
+permalink:       /:year/:title/
+
+defaults:
+    -
+        scope:
+            path: "" # empty string for all files
+            type: pages
+        values:
+            layout: default
+    -
+        scope:
+            path: "" # empty string for all files
+            type: posts
+        values:
+            layout: post
