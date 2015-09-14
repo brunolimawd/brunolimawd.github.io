@@ -123,6 +123,14 @@ h2 {
 	padding: 6px 0;
 }
 
+.talks li {
+	padding: 6px 0;
+}
+
+.talks li em {
+	font-size: 12px;
+}
+
 nav.main-nav {
 	padding: 20px 20px 0;
 

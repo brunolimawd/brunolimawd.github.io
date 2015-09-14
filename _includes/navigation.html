@@ -2,8 +2,12 @@
     {% if page.url != "/index.html" %}
         <a href='{{ site.baseurl }}{{ page.about }}'> <span class="arrow">←</span> Home </a>
     {% endif %}
-
-    {% if page.url != "/about/" %}
+    {% if page.url != "/talks/" %}
+        {% if site.aboutPage %}
+            <a href='{{ site.baseurl }}talks'>Talks</a>
+        {% endif %}
+    {% endif %}
+    {% if page.url != "/sobre/" %}
         {% if site.aboutPage %}
             <a href='{{ site.baseurl }}sobre'>Sobre</a>
         {% endif %}
