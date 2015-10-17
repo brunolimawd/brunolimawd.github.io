@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wearable JavaScript</title>
+  <meta name="description" content="Wearable JavaScript">
+  <meta name="author" content="Bruno Lima">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700">
+  <link rel="stylesheet" href="css/theme/cesar.css" id="theme">
+  <!-- Code syntax highlighting -->
+  <link rel="stylesheet" href="lib/css/monokai_sublime.css">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section data-markdown>
+        <script type="text/template">
+          ![Watch](images/watch-front.png)
+          ## #Wearable-JavaScript
+        </script>
+      </section>
+      <section data-markdown>
+        <script type="text/template">
+          ![Eu](images/avatar.jpg) <!-- .element: class="avatar" -->
+          ## Bruno Lima
+          - Front-end Developer @ CESAR
+          - Mozillian
+          - NodeBots Recife
+        </script>
+      </section>
+      <section data-markdown>
+        <script type="text/template">
+          ## #Wearables
+        </script>
+      </section>
+      <section data-markdown data-background="images/trinket_angel-alisa-neopixel-glasses.gif">
+      </section>
+      <section data-markdown data-background="images/makewearableelectronics.jpg">
+      </section>
+      <section data-markdown data-background="images/20150618154728116194o.jpg">
+      </section>
+      <section data-markdown data-background="images/Screen-Shot-2015-06-24-at-9.09.08-AM.png">
+      </section>
+      <section data-markdown data-background="images/james-chin-diy-smartwatch.jpg">
+      </section>
+      <section data-markdown data-background="images/preso.jpg">
+      </section>
+      <section data-markdown data-background="#1e6a7a" data-background-image="images/body.jpg" data-background-repeat="no-repeat" data-background-position="center" data-background-size="contain">
+      </section>
+      <section data-markdown data-background="#9aa1fe" data-transition="fade">
+        <script type="text/template">
+          ![Ecosystem](images/ecosystem.png)
+        </script>
+      </section>
+      <section data-markdown data-background="#9aa1fe" data-transition="fade">
+        <script type="text/template">
+          ![Ecosystem](images/ecosystem-a.png)
+        </script>
+      </section>
+      <section data-markdown data-background="#9aa1fe" data-transition="fade">
+        <script type="text/template">
+          ![Ecosystem](images/ecosystem-b.png)
+        </script>
+      </section>
+      <section data-markdown data-background="#9aa1fe" data-transition="fade">
+        <script type="text/template">
+          ![Ecosystem](images/ecosystem-c.png)
+        </script>
+      </section>
+      <section data-markdown data-background="#ecffc2">
+        <script type="text/template">
+          ![Ecosystem](images/battery.png)
+        </script>
+      </section>
+      <section data-markdown data-background="images/pebblejs.jpg">
+      </section>
+      <section data-markdown data-background="#ecffc2">
+        <script type="text/template">
+          ![Ecosystem](images/pebble-system.svg)
+        </script>
+      </section>
+      <section data-markdown>
+        <script type="text/template">
+          ## #primeiros-passos
+        </script>
+      </section>
+      <section data-markdown>
+        <script type="text/template">
+          ### Instalando o Pebble SDK
+
+          ```bash
+          brew install pebble/pebble-sdk/pebble-sdk
+          ```
+          [Linux e Windows - bit.ly/pebblesdk](http://bit.ly/pebblesdk)
+        </script>
+      </section>
+      <section data-markdown>
+        <script type="text/template">
+          ### Clonando o projeto Pebble.js
+
+          ```bash
+          git clone https://github.com/pebble/pebblejs.git hello-pebble
+          ```
+        </script>
+      </section>
+      <section data-markdown>
+        <script type="text/template">
+          ### || Ou
+
+          #### [cloudpebble.net](https://cloudpebble.net/)
+        </script>
+      </section>
+      <section data-markdown>
+        <script type="text/template">
+          ### Criando um Hello World
+
+          ```javascript
+          var UI = require('ui');
+
+          var card = new UI.Card({
+            title:'DevFest NE 2015',
+            subtitle:'Hello ...'
+          });
+
+          card.show();
+          ```
+        </script>
+      </section>
+      <section data-markdown>
+        <script type="text/template">
+          ### Copilando e instalando
+
+          ```bash
+          pebble build
+
+          pebble install --emulator aplite
+
+          pebble install --emulator basalt
+
+          pebble install --phone 0.0.0.0
+          ```
+        </script>
+      </section>
+      <section data-markdown data-background="#56a2ff">
+        <script type="text/template">
+          ## #Demo
+        </script>
+      </section>
+      <section data-markdown>
+        <script type="text/template">
+          ### #proximos-passos
+          ![Books](images/books.png)
+        </script>
+      </section>
+      <section data-markdown>
+        <script type="text/template">
+          ## #refs :metal:
+
+          - [Pebble Developer - bit.ly/1UIZMXv](http://bit.ly/1UIZMXv)
+          - [Cylon.js - bit.ly/1JYs39D](http://bit.ly/1JYs39D)
+          - [Johnny-Five - bit.ly/1QqsT16](http://bit.ly/1QqsT16)
+          - [Telefonica kit IoT wearable - bit.ly/1Nv8c5O](http://bit.ly/1Nv8c5O)
+          - [Make: Wearable Electronics [Book] - bit.ly/1izbiZz](http://bit.ly/1izbiZz)
+          - [Make: JavaScript Robotics [Book] - bit.ly/1Nrt127](http://amzn.to/1Nrt127)
+        </script>
+      </section>
+      <section data-markdown>
+        <script type="text/template">
+          ## Obrigado!
+
+          @brunolimawd
+
+          bhml@cesar.org.br
+
+          [bit.ly/wearablejsdevfestne](http://bit.ly/wearablejsdevfestne)
+
+          #### #DevFestNE
+        </script>
+      </section>
+    </div>
+    <img class="for-event" src="images/logo-devfest.png">
+    <img class="by-cesar" src="images/cesar.svg">
+  </div>
+  <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.js"></script>
+  <script>
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+      controls: false,
+      progress: true,
+      history: true,
+      center: true,
+
+      transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+      // Optional reveal.js plugins
+      dependencies: [
+        { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+        { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: 'plugin/zoom-js/zoom.js', async: true },
+        { src: 'plugin/notes/notes.js', async: true },
+        { src: 'plugin/emojify/js/emojify.js', async: true, callback: function() { emojify.setConfig({ img_dir: 'plugin/emojify/images/basic' }); emojify.run(); } }
+      ]
+    });
+  </script>
+</body>
+</html>
